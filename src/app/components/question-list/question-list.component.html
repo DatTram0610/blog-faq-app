@@ -1,8 +1,8 @@
 <div class="container">
   <div> 
-    <app-question-form></app-question-form>
+    <app-question-form (questionAdded)=addQuestion($event)></app-question-form>
   </div>
-
+<hr>
   <div *ngFor="let question of questions">
     <app-question-detail [question]="question"></app-question-detail>
   </div>

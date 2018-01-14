@@ -17,6 +17,17 @@ export class QuestionListComponent implements OnInit {
 
   ngOnInit() {
     this.questions = this.dataService.getQuestions();
+    this.checkLambda();
+  };
+
+  addQuestion(question: Question) {
+    this.dataService.postQuestion(question);
+  };
+
+  checkLambda() {
+    this.dataService.getLambdaResponse().subscribe(res => {
+      console.log(res.message)
+    });
   };
 };
 
