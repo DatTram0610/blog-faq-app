@@ -1,0 +1,9 @@
+<div class="container">
+  <div> 
+    <app-question-form></app-question-form>
+  </div>
+
+  <div *ngFor="let question of questions">
+    <app-question-detail [question]="question"></app-question-detail>
+  </div>
+</div>
